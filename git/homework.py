@@ -5,7 +5,6 @@ This is a list of functions that should be completed.
 from typing import Any
 from typing import List
 from string import ascii_lowercase
-from collections import OrderedDict
 
 class OurAwesomeException(Exception):
     pass
@@ -85,8 +84,7 @@ def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
     try:
         return int(first_value) * int(second_value)
     except TypeError:
-        raise ValueError
-        print('Not valid input data')
+        raise ValueError('Not valid input data')
 
 
 def is_word_in_text(word: str, text: str) -> bool:
@@ -135,7 +133,7 @@ def alphabet() -> dict:
         alphabet()
         >>> {"a": 1, "b": 2 ...}
     """
-    return dict(OrderedDict((i+1,k) for i, k in enumerate(ascii_lowercase)))
+    return dict(enumerate(ascii_lowercase, 1))
 
 
 def simple_sort(data: List[int]) -> List[list]:
