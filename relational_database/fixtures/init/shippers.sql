@@ -1,3 +1,5 @@
-INSERT INTO Shippers(ShipperName,Phone) VALUES ('Speedy Express','(503) 555-9831');
-INSERT INTO Shippers(ShipperName,Phone) VALUES ('United Package','(503) 555-3199');
-INSERT INTO Shippers(ShipperName,Phone) VALUES ('Federal Shipping','(503) 555-9931');
+CREATE TABLE Shippers (
+	ShipperID SERIAL PRIMARY KEY,
+	ShipperName VARCHAR(255),
+	Phone VARCHAR(255)
+	);
