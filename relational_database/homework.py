@@ -1,3 +1,6 @@
+ 
+from typing import List
+
 import psycopg2
 from config import DATABASE
 conn = psycopg2.connect(**DATABASE)
