@@ -190,7 +190,7 @@ def task_14_list_products_with_supplier_information(cur):
 
     Returns: 77 records
     """
-    cur.execute("""SELECT products.productid, products.productname, products.unit, products.price, products.country, products.city, suppliers.suppliername
+    cur.execute("""SELECT productid, productname, unit, price, country, city, suppliername
     FROM products 
     LEFT JOIN suppliers 
     ON products.supplierid=suppliers.supplierid;""")
@@ -222,7 +222,7 @@ def task_16_match_all_customers_and_suppliers_by_country(cur):
 
     Returns: 194 records
     """
-    cur.execute("""SELECT customers.customername, customers.address, customers.country AS customercountry, suppliers.country AS suppliercountry suppliers.suppliername
+    cur.execute("""SELECT customername, customers.address AS address, customers.country AS customercountry, suppliers.country AS suppliercountry, suppliername
     FROM customers
     FULL JOIN suppliers 
     ON customers.country = suppliers.country
